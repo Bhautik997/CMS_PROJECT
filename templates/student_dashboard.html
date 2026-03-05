@@ -1,0 +1,16 @@
+<h2>Student Dashboard</h2>
+
+<h3>Attendance</h3>
+{% for a in attendance %}
+<p>{{a.date}} - {{a.status}}</p>
+{% endfor %}
+
+<h3>Marks</h3>
+{% for m in marks %}
+<p>{{m.subject}} : {{m.marks}}</p>
+{% endfor %}
+
+<h3>Fees</h3>
+{% for f in fees %}
+<p>{{f.amount}} - {{f.status}}</p>
+{% endfor %}

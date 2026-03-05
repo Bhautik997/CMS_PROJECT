@@ -1,7 +1,7 @@
-<h2>College Management System</h2>
-
-<form method="post">
+<h2>College Management System Login</h2>
+<form method="POST" action="{% url 'login' %}">
     {% csrf_token %}
+
     Username:<br>
     <input type="text" name="username"><br>
 
@@ -10,3 +10,5 @@
 
     <button type="submit">Login</button>
 </form>
+
+{{ error }}
