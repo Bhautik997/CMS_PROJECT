@@ -1,18 +1,16 @@
 <h2>Student Dashboard</h2>
 
-<table border="1">
-<tr>
-<th>Name</th>
-<th>Email</th>
-<th>Department</th>
-</tr>
-
-{% for student in students %}
-<tr>
-<td>{{student.name}}</td>
-<td>{{student.email}}</td>
-<td>{{student.department}}</td>
-</tr>
+<h3>Attendance</h3>
+{% for a in attendance %}
+<p>{{a.date}} - {{a.status}}</p>
 {% endfor %}
 
-</table>
+<h3>Marks</h3>
+{% for m in marks %}
+<p>{{m.subject}} : {{m.marks}}</p>
+{% endfor %}
+
+<h3>Fees</h3>
+{% for f in fees %}
+<p>{{f.amount}} - {{f.status}}</p>
+{% endfor %}

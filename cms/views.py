@@ -3,10 +3,6 @@ from django.contrib.auth.decorators import login_required
 from .models import Student
 
 
-def login_view(request):
-    return render(request, "login.html")
-
-
 @login_required
 def student_dashboard(request):
     students = Student.objects.all()
