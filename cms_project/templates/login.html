@@ -1,11 +1,16 @@
-<h2>College Management System</h2>
+<h2>College Management System Login</h2>
 
-<form>
+<form method="POST">
+{% csrf_token %}
+
 Username:<br>
-<input type="text"><br>
+<input type="text" name="username"><br>
 
 Password:<br>
-<input type="password"><br><br>
+<input type="password" name="password"><br><br>
 
-<button>Login</button>
+<button type="submit">Login</button>
+
 </form>
+
+{{error}}

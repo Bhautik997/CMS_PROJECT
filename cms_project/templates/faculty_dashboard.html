@@ -1,7 +1,9 @@
 <h2>Faculty Dashboard</h2>
 
-<ul>
-<li>Mark Attendance</li>
-<li>Enter Marks</li>
-<li>View Student List</li>
-</ul>
+<a href="/add_attendance/">Add Attendance</a>
+
+<h3>Student List</h3>
+
+{% for s in students %}
+<p>{{s.user.username}}</p>
+{% endfor %}
